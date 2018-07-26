@@ -1,0 +1,21 @@
+{
+  "gateway": {
+    "listen": ":9090"
+  },
+  "backends": [
+    {
+      "package": "myapp",
+      "backend": "localhost:3000",
+      "services": {
+        "GreeterService": "/sample/greeter/"
+      }
+    },
+    {
+      "package": "myapp.mysubapp",
+      "backend": "localhost:3000",
+      "services": {
+        "AnotherGreeterService": "/sample/another-greeter/"
+      }
+    }
+  ]
+}
